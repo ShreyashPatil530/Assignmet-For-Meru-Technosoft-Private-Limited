@@ -23,20 +23,20 @@ The application consists of a typically structured **React frontend** and a **No
 
 ```mermaid
 graph TD
-    User["User"] -->|Interacts with UI| Client["React Client (Vite)"]
-    Client -->|HTTP Requests (Axios)| Server["Node.js Express Server"]
-    Server -->|CRUD Operations| DB[("(Database / Mock Data)")]
+    User["User"] -->|"Interacts with UI"| Client["React Client (Vite)"]
+    Client -->|"HTTP Requests (Axios)"| Server["Node.js Express Server"]
+    Server -->|"CRUD Operations"| DB["Database / Mock Data"]
     
     subgraph Frontend ["Client Side"]
-        Client -->|View Details| InvoicePage["Invoice Details Page"]
-        Client -->|Add Payment| PaymentModal["Payment Modal"]
-        Client -->|Download PDF| PDFGen["PDF Generator"]
+        Client -->|"View Details"| InvoicePage["Invoice Details Page"]
+        Client -->|"Add Payment"| PaymentModal["Payment Modal"]
+        Client -->|"Download PDF"| PDFGen["PDF Generator"]
     end
 
     subgraph Backend ["Server Side"]
-        Server -->|GET /api/invoices/:id| GetInvoice["Fetch Invoice"]
-        Server -->|POST /api/invoices/:id/payment| AddPayment["Process Payment"]
-        Server -->|Validation| Middleware["Validation Middleware"]
+        Server -->|"GET /api/invoices/:id"| GetInvoice["Fetch Invoice"]
+        Server -->|"POST /api/invoices/:id/payment"| AddPayment["Process Payment"]
+        Server -->|"Validation"| Middleware["Validation Middleware"]
     end
 ```
 

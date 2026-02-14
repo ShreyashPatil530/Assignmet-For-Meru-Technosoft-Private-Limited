@@ -52,36 +52,53 @@ graph TD
 - [Git](https://git-scm.com/)
 
 ### 1. Clone the Repository
-Open your terminal and run:
-\`\`\`bash
+## Running the Application
+
+Follow these steps to get the project up and running on your local machine.
+
+### 1. Prerequisites
+- **Node.js**: Ensure you have Node.js (v18+) installed.
+- **Git**: Ensure you have Git installed to manage the repository.
+
+### 2. Installation
+First, clone the repository and install dependencies for both the client and server.
+
+```bash
+# Clone the repository
 git clone https://github.com/ShreyashPatil530/Assignmet-For-Meru-Technosoft-Private-Limited.git
 cd Assignmet-For-Meru-Technosoft-Private-Limited
-\`\`\`
 
-### 2. Server Setup
-Navigate to the server directory, install dependencies, and start the server:
-\`\`\`bash
+# Install Server dependencies
 cd server
 npm install
-npm start
-\`\`\`
-The server will run on \`http://localhost:5000\`.
 
-### 3. Client Setup
-Open a **new terminal window**, navigate to the client directory, install dependencies, and start the frontend:
-\`\`\`bash
-cd client
+# Install Client dependencies
+cd ../client
 npm install
+```
+
+### 3. Start the Backend (Server)
+Navigate to the `server` folder and start the Node.js server.
+```bash
+cd server
+npm start
+```
+- The server will be running at: `http://localhost:5000`
+
+### 4. Start the Frontend (Client)
+Open a **new terminal**, navigate to the `client` folder, and start the Vite development server.
+```bash
+cd client
 npm run dev
-\`\`\`
-The client will run on \`http://localhost:5173\`.
+```
+- The client will be running at: `http://localhost:5173`
+- Open this URL in your browser to view the Invoice Details page.
 
 ## API Endpoints
 | Method | Endpoint | Description |
-|Col1|Col2|Col3|
 |---|---|---|
-| `GET` | `/api/invoices/:id` | Fetch specific invoice details including items and history. |
-| `POST` | `/api/invoices/:id/payment` | Add a payment record to a specific invoice. |
+| `GET` | `/api/invoices/:id` | Fetch specific invoice details. |
+| `POST` | `/api/invoices/:id/payments` | Add a payment record to a specific invoice. |
 
 ## Folder Structure
 \`\`\`
